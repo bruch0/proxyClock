@@ -12,6 +12,16 @@ export class AppService {
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
       };
 
+      return await axios.post(
+        'https://www.rhid.com.br/v2/login.svc',
+        {
+          domain: null,
+          email: 'lucas.dev@hublocal.com.br',
+          password: 'waqescvs',
+        },
+        { headers },
+      );
+
       const result = await axios({
         url: 'https://www.rhid.com.br/v2/login.svc',
         method: 'POST',
